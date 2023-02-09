@@ -5,7 +5,7 @@ const incrementBtn = document.querySelector('button[data-action="increment"]')
 class watchDog {
   #cntV
   constructor(value) {
-    this.#cntV = value
+    this.cntV = value
   }
   get cntV() {
     return this.#cntV
@@ -26,5 +26,5 @@ incrementBtn.addEventListener('click', () => {
 })
 
 document.addEventListener('keydown', () => {
-  watchCntV.cntV += 3
+  watchCntV.cntV = watchCntV.cntV > 3 ? watchCntV.cntV - 3 : 0
 })
