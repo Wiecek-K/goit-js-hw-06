@@ -8,9 +8,7 @@ const incrementBtn = document.querySelector('button[data-action="increment"]')
 decrementBtn.disabled = true
 
 counter.addEventListener('click', () => {
-  if (counterValue < 1) {
-    decrementBtn.disabled = true
-  } else decrementBtn.disabled = false
+  decrementBtn.disabled = counterValue < 1 ? true : false
 })
 decrementBtn.addEventListener('click', () => {
   counterValue--
