@@ -6,7 +6,6 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ]
-
 const body = document.body
 const list = body.querySelector('#ingredients')
 ingredients.forEach((e) => {
